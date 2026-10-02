@@ -59,7 +59,7 @@ func (l List) Equal(o Type) bool {
 // If the other List does not have a type compatible ElementType, it will
 // return false.
 func (l List) UsableAs(o Type) bool {
-	if o.Is(DynamicPseudoType) {
+	if isDynamicPseudoType(o) {
 		return true
 	}
 	v, ok := o.(List)

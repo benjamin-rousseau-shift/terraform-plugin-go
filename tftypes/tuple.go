@@ -72,7 +72,7 @@ func (tu Tuple) Equal(o Type) bool {
 // If the other Tuple does not have type compatible ElementTypes in each
 // position, it will return false.
 func (tu Tuple) UsableAs(o Type) bool {
-	if o.Is(DynamicPseudoType) {
+	if isDynamicPseudoType(o) {
 		return true
 	}
 	v, ok := o.(Tuple)

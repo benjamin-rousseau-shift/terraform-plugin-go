@@ -56,7 +56,7 @@ func (m Map) Equal(o Type) bool {
 // If the other Map does not have a type compatible ElementType, it will
 // return false.
 func (m Map) UsableAs(o Type) bool {
-	if o.Is(DynamicPseudoType) {
+	if isDynamicPseudoType(o) {
 		return true
 	}
 	v, ok := o.(Map)

@@ -55,7 +55,7 @@ func (s Set) Equal(o Type) bool {
 // If the other Set does not have a type compatible ElementType, it will
 // return false.
 func (s Set) UsableAs(o Type) bool {
-	if o.Is(DynamicPseudoType) {
+	if isDynamicPseudoType(o) {
 		return true
 	}
 	v, ok := o.(Set)

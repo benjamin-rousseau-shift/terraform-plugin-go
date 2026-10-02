@@ -123,7 +123,7 @@ func (o Object) Equal(other Type) bool {
 //
 // If the current type contains OptionalAttributes, it will panic.
 func (o Object) UsableAs(other Type) bool {
-	if other.Is(DynamicPseudoType) {
+	if isDynamicPseudoType(other) {
 		return true
 	}
 	v, ok := other.(Object)

@@ -1,3 +1,5 @@
 kind: ENHANCEMENTS
 body: 'tftypes: Reduced allocations in built-in type compatibility checks.'
 time: 2026-10-02T22:49:45Z
+custom:
+  Issue: "667"
